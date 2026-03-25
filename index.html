@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Logistics Group</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px;
+      background: #1e293b;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .container {
+      padding: 40px 20px;
+    }
+    .card {
+      background: #1e293b;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background: #0ea5e9;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Global Logistics Group</h1>
+  <p>"Delivering Excellence Since 1998"</p>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Bienvenido</h2>
+    <p>Gracias por confiar en nuestra red internacional de logística avanzada.</p>
+  </div>
+
+  <div class="card">
+    <h2>Verificar envío</h2>
+    <p>Introduce tu código para continuar</p>
+    <input id="code" placeholder="Código de seguimiento">
+    <br><br>
+    <button onclick="checkCode()">Verificar</button>
+    <p id="result"></p>
+  </div>
+</div>
+
+<script>
+  function checkCode() {
+    const code = document.getElementById('code').value;
+    const result = document.getElementById('result');
+
+    if (code.toLowerCase().includes("cumple")) {
+      result.innerHTML = "🎉 Envío encontrado: REGALO DE CUMPLEAÑOS 🎉";
+    } else {
+      result.innerHTML = "Envío en proceso... inténtalo otra vez 😉";
+    }
+  }
+</script>
+
+</body>
+</html>

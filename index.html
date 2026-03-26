@@ -7,35 +7,85 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: white;
-      color: #111;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: white;
+      color: #000;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
     }
 
     img {
-      width: 80%;
-      max-width: 800px;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 30px;
     }
 
-    .message {
-      font-size: 1.3em;
-      color: #555;
+    .status-text {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      line-height: 1.4;
+      margin-bottom: 40px;
+    }
+
+    .main-logo {
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 40px;
+    }
+
+    .description {
+      font-weight: bold;
+      font-size: 1.05em;
+      line-height: 1.5;
+      color: #000;
+    }
+
+    .footer-note {
+      margin-top: 25px;
+      font-weight: bold;
+    }
+
+    /* Pequeño ajuste para simular la barra de carga de arriba */
+    .loading-icon {
+        width: 150px;
+        margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Sustituye "logo.png" por el nombre de tu archivo -->
-  <img src="logo.png" alt="Logo del juego">
+  <div class="container">
+    <div class="status-text">
+        LOADING...<br><br>
+        UPSS ... ALGO HA SALIDO MAL<br>
+        LO SENTIMOS. ESTA PÁGINA SE ENCUENTRA<br>
+        TEMPORALMENTE FUERA DE SERVICIO POR<br>
+        PROBLEMAS CON LA LEY.
+    </div>
 
-  <div class="message">
-    Upss! Lo siento, estamos en mantenimiento
+    <img src="logo.png" alt="Hasta que la hipoteca nos separe" class="main-logo">
+
+    <div class="description">
+      Nuestro equipo está trabajando para resolver el pequeño<br>
+      malentendido con las autoridades.<br>
+      Mientras tanto, si habéis disfrutado el juego y queréis ayudarnos a<br>
+      pagar la multa, podéis apoyar nuestra causa firmando la petición en<br>
+      Change.org y haciendo un bizum al 639427784.
+    </div>
+
+    <div class="footer-note">
+      Gracias por vuestra comprensión (y discreción)
+    </div>
   </div>
 
 </body>

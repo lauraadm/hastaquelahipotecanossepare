@@ -1,92 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hasta que la hipoteca nos separe</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: white;
-      color: #000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasta que la Hipoteca nos Separe</title>
+    <style>
+        :root {
+            --rojo-monopoly: #e31b23;
+            --blanco: #ffffff;
+            --negro: #222222;
+            --gris-claro: #f4f4f4;
+        }
 
-    .container {
-      max-width: 700px;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--gris-claro);
+            color: var(--negro);
+            line-height: 1.6;
+        }
 
-    img {
-      width: 100%;
-      max-width: 500px;
-      margin-bottom: 30px;
-    }
+        header {
+            background-color: var(--rojo-monopoly);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
 
-    .status-text {
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 1.1em;
-      line-height: 1.4;
-      margin-bottom: 40px;
-    }
+        header img {
+            max-width: 300px;
+            height: auto;
+        }
 
-    .main-logo {
-        width: 100%;
-        max-width: 450px;
-        margin-bottom: 40px;
-    }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
 
-    .description {
-      font-weight: bold;
-      font-size: 1.05em;
-      line-height: 1.5;
-      color: #000;
-    }
+        .btn {
+            background-color: var(--rojo-monopoly);
+            color: white;
+            border: 2px solid var(--negro);
+            padding: 12px 24px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
 
-    .footer-note {
-      margin-top: 25px;
-      font-weight: bold;
-    }
+        .btn:hover {
+            background-color: var(--negro);
+            transform: scale(1.05);
+        }
 
-    /* Pequeño ajuste para simular la barra de carga de arriba */
-    .loading-icon {
-        width: 150px;
-        margin-bottom: 10px;
-    }
-  </style>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: none; /* Oculto por defecto */
+        }
+
+        .active {
+            display: block;
+        }
+
+        h2 {
+            color: var(--rojo-monopoly);
+            border-bottom: 3px solid var(--rojo-monopoly);
+            padding-bottom: 10px;
+        }
+
+        .tablero-img {
+            width: 100%;
+            border: 5px solid var(--negro);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .instruction-step {
+            background: #fff8f8;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 5px solid var(--rojo-monopoly);
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="status-text">
-        LOADING...<br><br>
-        UPSS ... ALGO HA SALIDO MAL<br>
-        LO SENTIMOS. ESTA PÁGINA SE ENCUENTRA<br>
-        TEMPORALMENTE FUERA DE SERVICIO POR<br>
-        PROBLEMAS CON LA LEY.
+<header>
+    <img src="logo.png" alt="Hasta que la Hipoteca nos Separe">
+</header>
+
+<nav>
+    <button class="btn" onclick="showSection('contenido')">Contenido</button>
+    <button class="btn" onclick="showSection('instrucciones')">Instrucciones</button>
+    <button class="btn" onclick="showSection('contacto')">Contacto</button>
+</nav>
+
+<div id="contenido" class="container active">
+    <h2>Contenido del Juego</h2>
+    <ul>
+        <li>1 Tablero de juego</li>
+        <li>8 Fichas (incluyen 2 de repuesto)</li>
+        <li>12 Hoteles y 32 Casas</li>
+        <li>2 Dados</li>
+        <li>28 Tarjetas de Título de Propiedad</li>
+        <li>16 Cartas de Patri y 16 Cartas de Miguel</li>
+        <li>1 Paquete de billetes para La Banca</li>
+    </ul>
+    <h3>Vista del Tablero</h3>
+    <img src="tablero.png" alt="Tablero del juego" class="tablero-img">
+</div>
+
+<div id="instrucciones" class="container">
+    <h2>Instrucciones de Juego</h2>
+    
+    <div class="instruction-step">
+        <h3>1. Cómo ganar</h3>
+        <p>Muévete por el tablero comprando todas las propiedades que puedas. Cuantas más poseas, más alquiler podrás cobrar. El último jugador con dinero cuando los demás hayan quebrado, ¡gana!</p>
     </div>
 
-    <img src="logo.png" alt="Hasta que la hipoteca nos separe" class="main-logo">
-
-    <div class="description">
-      Nuestro equipo está trabajando para resolver el pequeño<br>
-      malentendido con las autoridades.<br>
-      Mientras tanto, si habéis disfrutado el juego y queréis ayudarnos a<br>
-      pagar la multa, podéis apoyar nuestra causa firmando la petición en<br>
-      Change.org y haciendo un bizum al 639427784.
+    <div class="instruction-step">
+        <h3>2. El Banquero</h3>
+        <p>El Banquero custodia el dinero, las casas, hoteles y títulos de propiedad. También gestiona las subastas. Si la Banca se queda sin dinero, puede emitir pagarés en papel blanco.</p>
     </div>
 
-    <div class="footer-note">
-      Gracias por vuestra comprensión (y discreción)
+    <div class="instruction-step">
+        <h3>3. Preparación y Reparto</h3>
+        <p>Cada jugador recibe 1,500 en billetes repartidos así:</p>
+        <ul>
+            <li>2 billetes de 500 | 4 billetes de 100</li>
+            <li>1 billete de 50 | 1 billete de 20</li>
+            <li>2 billetes de 10 | 1 billete de 5 | 5 billetes de 1</li>
+        </ul>
     </div>
-  </div>
+
+    <div class="instruction-step">
+        <h3>4. Reglas Especiales: Parque Polvoranca</h3>
+        <p>Vas directamente allí si caes en la casilla "Vaya al Parque", si sacas dobles 3 veces seguidas o por cartas de Patri/Miguel. Para salir puedes: pagar 50, usar una tarjeta de salida o sacar dobles.</p>
+    </div>
+
+    <div class="instruction-step">
+        <h3>5. La Quiniela</h3>
+        <p>Los impuestos se acumulan en el centro del tablero. El jugador que caiga en la casilla de <strong>La Quiniela</strong> se lleva todo lo acumulado.</p>
+    </div>
+</div>
+
+<div id="contacto" class="container">
+    <h2>Contacto</h2>
+    <p>¿Tienes dudas sobre las reglas o te falta alguna pieza?</p>
+    <p><strong>Email:</strong> soporte@hastaquelahipoteca.com</p>
+    <p><strong>Ubicación:</strong> Parque Polvoranca, Madrid.</p>
+    <p><em>"Recuerda: los préstamos entre jugadores no están permitidos."</em></p>
+</div>
+
+<div class="footer">
+    &copy; 2026 Hasta que la hipoteca nos separe. Todos los derechos reservados.
+</div>
+
+<script>
+    function showSection(id) {
+        // Ocultar todas las secciones
+        const sections = document.querySelectorAll('.container');
+        sections.forEach(section => section.classList.remove('active'));
+        
+        // Mostrar la seleccionada
+        document.getElementById(id).classList.add('active');
+    }
+</script>
 
 </body>
 </html>

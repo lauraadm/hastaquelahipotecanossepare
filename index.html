@@ -102,6 +102,19 @@
             margin-bottom: 10px;
             border-left: 5px solid var(--rojo-monopoly);
         }
+        
+        .instruction-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .instruction-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -218,7 +231,10 @@
     </div>
 
     <div class="instruction-step">
-        <h3>8. Parque Polvoranca</h3>
+        <div class="instruction-header">
+            <img src="polvoranca.png" alt="Cartas" class="instruction-icon">
+            <h3>8. Parque Polvoranca</h3>
+        </div>
         <p>Puedes caer aquí por penalización o simplemente de visita.</p>
         <p>Vas directamente si caes en la casilla "Vaya al Parque", por carta o por sacar 3 veces dobles. Al ir por penalización, no cobras los 200 del Altar.</p>
         <p><strong>Para salir:</strong> Pagar 50, usar una tarjeta "Quedas libre del Parque Polvoranca", sacar dobles o esperar 3 turnos (pagando 50 al finalizar el tercero).</p>

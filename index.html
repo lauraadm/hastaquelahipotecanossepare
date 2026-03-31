@@ -208,12 +208,39 @@
 </header>
 
 <nav id="sideMenu">
+    <button class="btn" onclick="showSection('inicio')">Inicio</button>
     <button class="btn" onclick="showSection('contenido')">Contenido</button>
     <button class="btn" onclick="showSection('instrucciones')">Instrucciones</button>
     <button class="btn" onclick="showSection('dedicatorias')">Dedicatorias</button>
     <button class="btn" onclick="showSection('agradecimientos')">Agradecimientos</button>
     <button class="btn" onclick="showSection('contacto')">Contacto</button>
 </nav>
+
+<div id="inicio" class="container active">
+    <h2 style="text-align: center; font-size: 1.8em; margin-bottom: 30px; text-transform: uppercase; border-bottom: none;">
+        ¿Te atreves a desafiar tu matrimonio con este trepidante juego?
+    </h2>
+    
+    <h3 style="border-bottom: 2px solid var(--rojo-monopoly); padding-bottom: 5px; margin-top: 30px; color: var(--negro);">RESUMEN DEL JUEGO</h3>
+    
+    <p><strong>Hasta que la hipoteca nos separe</strong> es la versión más romántica, caótica y exclusiva del Monopoly clásico, donde el amor y el dinero van de la mano... hasta que dejan de hacerlo. Partiendo de la casilla del <strong>"ALTAR"</strong> mueve tu ficha personalizada a través del tablero según lo que marquen los dados.</p>
+    
+    <p>A lo largo del recorrido visitarás lugares clave, momentos inolvidables y rincones especiales de la historia de los novios.</p>
+    
+    <p>Cuando caigas en una casilla que aún no tenga dueño, puedes comprársela a <strong>"La Wedding Planer"</strong>.</p>
+    
+    <p>Los jugadores que poseen propiedades cobrarán un alquiler a aquellos que caigan en ellas. Edificar casas y hoteles aumentará lo que otros deben pagar, así que... ¡cuantas más tengas, mejor!</p>
+    
+    <p>Si necesitas ganar más dinero puedes pedir ayuda a <strong>"La Wedding Planer"</strong> e hipotecar tus propiedades.</p>
+    
+    <p>Cada vez que saques una carta de <strong>Patri o Miguel</strong>, prepárate: pueden hacerte ganar mucho dinero, perder más o incluso llevarte a <strong>"Polvoranca"</strong>.</p>
+
+    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 40px; flex-wrap: wrap;">
+        <button class="btn" onclick="showSection('instrucciones')">Instrucciones</button>
+        <button class="btn" onclick="showSection('dedicatorias')">Dedicatorias</button>
+        <button class="btn" onclick="showSection('agradecimientos')">Agradecimientos</button>
+    </div>
+</div>
 
 <div id="contenido" class="container active">
     <h2>Contenido del Juego</h2>
